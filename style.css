@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.active:hover{
+    color: blue;
+}
+.contact-button{
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: #ff40d2;
+    position: fixed;
+    right: 5%;
+    bottom: 8%;
+    z-index: 100;
+}
+.contact-button-div{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+
+nav{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    width: 100vw;
+    
+}
+
+
+.banner .banner-image-div, .what-i-do wid-image-div{
+    width: 48%;
+    height: 400px;
+}
+.banner img, .what-i-do img{
+   width: 100%;
+}
+.banner-content-div{
+    
+    
+}
+    
+.banner-content-div h1{
+    margin: auto;
+}
+
+.banner-contact-button button{
+    border: none;
+    background: purple;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    margin: auto;
+    color: white ;
+    
+}
+.banner-icons svg{
+    margin: 5px;
+}
+.banner-icons{
+    width: 100%;
+    
+}
+.wid-icons svg{
+    margin: 10px ;
+}
+@keyframes progress {
+  0% { --percentage: 0; }
+  100% { --percentage: var(--value); }
+}
+
+@property --percentage {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+[role="progressbar"] {
+  --percentage: var(--value);
+  --primary: #369;
+  --secondary: #adf;
+  --size: 70px;
+  animation: progress 2s 0.5s forwards;
+  width: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  margin: 20px;
+  place-items: center;
+}
+
+[role="progressbar"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+  mask: radial-gradient(white 55%, transparent 0);
+  mask-mode: alpha;
+  -webkit-mask: radial-gradient(#0000 55%, #000 0);
+  -webkit-mask-mode: alpha;
+}
+
+[role="progressbar"]::after {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--primary);
+}
+
+/* demo */
+
+
+/***/
+
+
+
+.progress-div{
+    display: flex;
+   
+    align-items: center;
+    
+    justify-content: center;
+}
+.progress-image-div img{
+    width: 88%;
+}
+.card-section{
+    display: flex;
+    
+}
+.about img{
+    width: 50%;
+    
+    border: 5px solid purple;
+    border-radius: 50%;
+}
+body svg:hover, body svg:active{
+    transform: scale(2);
+    transition: 1s ease-in;
+    
+}
+.project a button{
+    background: #1562ff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
